@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <title>Receitas</title>
+</head>
+
+<body>
+    <% receitas.forEach(receita => { %>
+    <div class="container-fluid">
+        <main class="col-12 py-md-3 pl-md-3" role="main">
+            <table class="table table-striped">
+                <tr class="row">
+                    <th class="col-1">#</th>
+                    <th class="col-11"><%= receita.nome%></td>
+                </tr>
+
+                <tr class="row">
+                    <th class="col-1">Ingredientes</td>
+                    <td class="col-11"><%= receita.ingredientes%></td>
+                </tr>
+
+                <tr class="row">
+                    <th class="col-1">Tags</td>
+                    <td class="col-11"><%= receita.tags%></td>
+                </tr>
+
+                <tr class="row">
+                    <th class="col-1">Modo de Preparo</td>
+                    <td class="col-11"><%= receita.modo_de_preparo%></td>
+                </tr>
+
+                <tr class="row">
+                    <th class="col-1">Tempo de Preparo</td>
+                    <td class="col-11"><%= receita.tempo_de_preparo%></td>
+                </tr>
+
+                <tr class="row">
+                    <th class="col-1">Porções</td>
+                    <td class="col-11"><%= receita.porcoes%></td>
+                </tr>
+
+                <tr class="row">
+                    <td class="col-2"><a href="/receita/<%= receita.id%>">Excluir</a></td>
+                    <td class="col-2"><a href="/alterarReceita/<%= receita.id%>">Alterar</a></td>
+                </tr>
+            </table>
+        </main>
+    </div>
+    <%})%>
+</body>
+
+</html>

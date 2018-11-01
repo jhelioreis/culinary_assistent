@@ -1,0 +1,1 @@
+FLASK_APP=culinary_assistent.py flask run
